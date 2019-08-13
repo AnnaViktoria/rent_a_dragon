@@ -1,0 +1,29 @@
+<h1>Welcome <%= @user.first_name%></h1>
+
+<h2>Your Dragons : </h2>
+<ul>
+  <% @dragons.each do |dragon| %>
+    <li><%= dragon.name %></li>
+  <% end %>
+</ul>
+
+<h2>Your Reservation : </h2>
+
+<table style="width:500px">
+  <tr>
+    <th>Start date :</th>
+    <th>End date :</th>
+    <th>Dragon name :</th>
+  </tr>
+  <% @reservations.each do |reservation| %>
+    <% dragon = Dragon.where(id: reservation.dragon_id)%>
+    <tr>
+      <th><%= reservation.start_date %> </th>
+      <th><%= reservation.end_date %></th>
+      <th><%= dragon.name%></th>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to "edit your information", edit_user_registration_path(), class: "btn btn-primary"  %>
+
