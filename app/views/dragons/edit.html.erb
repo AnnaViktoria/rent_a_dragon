@@ -1,0 +1,9 @@
+<h1>Edit Your Dragon</h1>
+<p>Dragon lost weight? Moved? Changed its name?</p>
+<%= simple_form_for @dragon do |f| %>
+  <%= f.input :name %>
+  <%= f.input :age %>
+  <%= f.input :country_of_origin %>
+  <%= f.input :location %>
+  <%= f.button :submit, class: "btn" %>
+<% end %>
