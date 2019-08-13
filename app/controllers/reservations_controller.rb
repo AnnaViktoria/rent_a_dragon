@@ -8,16 +8,19 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
+    @reservation.dragon = Dragon.find(params[:dragon_id])
     if @reservation.save
-      redirect_to reservation_path(reservation_params)
+      redirect_to reservations_path(@reservation)
     else
       render :new
     end
   end
 
   def update
-    if @reservation.update(reservation_params)
-      redirect_to reservation_path(reservation_params)
+    @reservation = Reservation.new(reservation_params)
+    @reservation.dragon = Dragon.find(params[:dragon_id])
+    if @reservation.save
+      redirect_to reservations_path(@reservation)
     else
       render :update
     end
@@ -38,7 +41,7 @@ class ReservationsController < ApplicationController
   end
 
   def reservation_params
-    params.require(:reservation).permit(:start_date, :end_date, :dragon_id, :user_id)
+    params.require(:reservation).permit(:start_date, :end_date)
 
   end
 
