@@ -8,3 +8,4 @@ Rails.application.routes.draw do
   resources :accounts
   resources :reviews, only: [:edit, :update, :destroy]
 end
+
