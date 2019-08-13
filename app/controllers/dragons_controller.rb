@@ -5,7 +5,6 @@ class DragonsController < ApplicationController
   end
 
   def show
-    @dragon = Dragon.new
   end
 
   def new
