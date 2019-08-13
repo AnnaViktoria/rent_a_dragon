@@ -3,7 +3,7 @@
 <h2>Your Dragons : </h2>
 <ul>
   <% @dragons.each do |dragon| %>
-    <li><%= dragon.name %></li>
+    <li><%= link_to "#{dragon.name}", edit_dragon_path(dragon.id) %></li>
   <% end %>
 </ul>
 
