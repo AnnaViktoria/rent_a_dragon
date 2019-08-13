@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <%= simple_form_for @dragon do |f| %>
+        <%= f.input :name %>
+        <%= f.input :age %>
+        <%= f.input :country_of_origin %>
+        <%= f.input :location %>
+        <%= f.button :submit, class: "btn" %>
+      <% end %>
+    </div>
+  </div>
+</div>
