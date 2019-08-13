@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   root to: 'dragons#index'
   resources :dragons do
     resources :reservations
-    end
+    resources :reviews, only: [:new, :create]
+  end
+  resources :reviews, only: [:edit, :update, :destroy]
 end
+
