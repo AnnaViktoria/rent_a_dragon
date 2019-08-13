@@ -1,18 +1,18 @@
 class ReviewsController < ApplicationController
 
-  def new
-    @review = Review.new
-  end
+  # def new
+
 
   def create
-    @review = @review = Review.new(params[:review])
+    @review = @review = Review.new(review_params)
     @review.dragon = Dragon.find(params[:dragon_id])
-    @review.user = current_user.find(params[:current_user_id])
+    @review.user = current_user
+    @review.valid?
     # Associate review with dragon
     # Associate review with user
     # use current_user to access the currently logged user
     @review.save
-    redirect_to @review
+    redirect_to dragon_path(@review.dragon)
   end
 
   def destroy
