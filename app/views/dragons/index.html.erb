@@ -1,11 +1,13 @@
+<%= render 'shared/banner' %>
 <h1>This is the index</h1>
 <h2><strong>We got cool Dragons</strong></h2>
 
 <div class="container">
   <div class="row">
     <% @dragons.each do |dragon|  %>
-      <div class="col-3">
-      <%= link_to dragon.name, dragon_path(dragon) %>
+      <div class="col-6">
+      <h2><%= link_to dragon.name, dragon_path(dragon) %></h2>
+      <%= link_to 'Edit', edit_dragon_path(dragon) %>
       <% end %>
       </div>
   </div>
