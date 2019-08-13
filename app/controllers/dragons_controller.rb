@@ -1,4 +1,6 @@
 class DragonsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index]
+
   before_action :set_dragon, only: [:show, :destroy, :edit]
   def index
     @dragons = Dragon.all
