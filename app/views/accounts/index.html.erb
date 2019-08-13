@@ -3,7 +3,8 @@
 <h2>Your Dragons : </h2>
 <ul>
   <% @dragons.each do |dragon| %>
-    <li><%= link_to "#{dragon.name}", edit_dragon_path(dragon.id) %></li>
+    <li><%= link_to "#{dragon.name}", edit_dragon_path(dragon.id) %> <%= link_to 'Delete',  dragon_path(dragon.id),
+          data: { confirm: 'Are you sure?' }, method: :delete %> </li>
   <% end %>
 </ul>
 
@@ -14,6 +15,7 @@
     <th>Start date :</th>
     <th>End date :</th>
     <th>Dragon name :</th>
+    <th><th>
   </tr>
   <% @reservations.each do |reservation| %>
     <% dragon = Dragon.where(id: reservation.dragon_id)%>
@@ -21,10 +23,13 @@
       <th><%= reservation.start_date %> </th>
       <th><%= reservation.end_date %></th>
       <th><%= dragon.name%></th>
-  </tr>
+      <th> <%= link_to 'Delete',  reservation_path(reservation.id),
+          data: { confirm: 'Are you sure?' }, method: :delete %><th>
+      </tr>
   <% end %>
 </table>
 
 <%= link_to "edit your information", edit_user_registration_path(), class: "btn btn-primary"  %>
 <%= link_to "Add dragon", new_dragon_path(), class: "btn btn-primary"  %>
+
 
