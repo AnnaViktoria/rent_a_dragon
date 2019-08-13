@@ -1,0 +1,9 @@
+<h1>Dashboard</h1>
+<ul>
+  <% @reservations.each do |reservation| %>
+    <li>
+      <h4><%= reservation.dragon.name %></h4>
+      <p><%= "From #{reservation.start_date} to #{reservation.end_date}" %></p>
+    </li>
+  <% end %>
+</ul>
