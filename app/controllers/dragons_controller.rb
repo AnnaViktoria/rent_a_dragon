@@ -8,6 +8,7 @@ class DragonsController < ApplicationController
   def show
     @reservation = Reservation.new
     @review = Review.new
+    set_unavailable_dates
   end
 
   def new
@@ -46,5 +47,15 @@ class DragonsController < ApplicationController
 
   def dragon_params
     params.require(:dragon).permit(:name, :age, :country_of_origin, :location)
+  end
+
+  def set_unavailable_dates
+    reservations = current_user.reservations
+    @unavailable_dates = []
+    reservations.each do |reservation|
+      (reservation.start_date .. reservation.end_date).to_a.each do |date|
+          @unavailable_dates << date.to_s
+      end
+    end
   end
 end

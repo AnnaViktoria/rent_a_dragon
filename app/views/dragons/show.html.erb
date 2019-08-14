@@ -9,10 +9,7 @@
 <h3><%= @dragon.location %></h3>
 
 <%= link_to 'Add a new dragon for rent!', new_dragon_path %>
-<%= render 'shared/reservationform' %>
-
-
-
+<%= render 'shared/flatpickrform', unavailable_dates: @unavailable_dates %>
 
 <!-- # review form -->
 <h3>Reviews</h3>
@@ -40,4 +37,4 @@
       </div>
     </div>
 
-</div>
+
