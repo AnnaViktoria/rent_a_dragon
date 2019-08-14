@@ -44,7 +44,7 @@ class DragonsController < ApplicationController
 
   def destroy
     @dragon.destroy
-    redirect_to  accounts_path()
+    redirect_to accounts_path
   end
 
   private

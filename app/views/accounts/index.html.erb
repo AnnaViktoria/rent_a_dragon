@@ -1,5 +1,29 @@
-<h1>Welcome <%= current_user.first_name%></h1>
+<div class="account-main">
+  <h1><%= current_user.first_name%>'s account</h1>
 
+  <div class ="table-container">
+    <h2>Your Dragons : </h2>
+    <table class ="table-main">
+       <tr class ="table-titles">
+        <th class ="table-title"> Name </th>
+        <th class ="table-title"> Age (years) </th>
+        <th class ="table-title"> Country of origin </th>
+        <th class ="table-title"> Action </th>
+      </tr class ="table-titles">
+      <% @dragons.each do |dragon| %>
+        <tr class ="table-titles">
+          <td class ="table-data"> <%= link_to "#{dragon.name}", edit_dragon_path(dragon.id) %> </th>
+          <td class ="table-data"> <%= link_to "#{dragon.age}", edit_dragon_path(dragon.id) %> </th>
+          <td class ="table-data"> <%= link_to "#{dragon.country_of_origin}", edit_dragon_path(dragon.id) %> </th>
+          <td class ="table-data"> <%= link_to 'Delete',  dragon_path(dragon.id)%> </th>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+  <div></div>
+</div>
+
+<<<<<<< HEAD
 <h2>Your Dragons : </h2>
 <ul>
   <% @dragons.each do |dragon| %>
@@ -7,6 +31,8 @@
           data: { confirm: 'Are you sure?' }, method: :delete %> </li>
   <% end %>
 </ul>
+=======
+>>>>>>> 91c65dcb94d8026d8cdff29c4ac130021ef053f1
 
 <h2>Your Reservation : </h2>
 
