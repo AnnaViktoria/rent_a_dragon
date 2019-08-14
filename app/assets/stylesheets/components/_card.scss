@@ -12,23 +12,23 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0);
-    .cardy-text {
-      color: black;
-      position: relative
-  }
 }
-
-
 
 .dragon-box {
   height: 270px;
-  width: 230px;
+  width: 360px;
   background-color: #E2E0D2;
-  padding-top: 5px;
-  padding-right: 5px;
+  padding-top: 7px;
+  padding-right: 15px;
   padding-bottom: 50px;
-  padding-left: 5px;
+  padding-left: 15px;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
   margin: 30px;
+  h2 a {
+    color: white;
+    font-family: 'Libre Caslon Display', serif;
+    align-items: center;
+    font-size: 40px;
+  }
 }
