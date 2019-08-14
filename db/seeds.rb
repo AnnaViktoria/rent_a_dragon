@@ -14,10 +14,11 @@ User.destroy_all
 
 
 puts "Creating 4 users"
-nicolo = User.create(first_name: "Nicolo", last_name: "Buzzi", email: "nicolo@gmail.com", password: "123456")
+nicolo = User.create(first_name: "Nicolo", last_name: "Buzzi", email: "nicolo@buzzi.org", password: "12345678")
 anna = User.create(first_name: "Anna", last_name: "Viktoria", email: "anna@gmail.com", password: "123456")
 marie = User.create(first_name: "Marie", last_name: "Hvam", email: "marie@hotmail.com", password: "123456")
 nathan = User.create(first_name: "Nathan", last_name: "Morris", email: "nathan@gmail.com", password: "123456")
+puts "4 users success created"
 
 puts "Creating dragon 1"
 dragon = Dragon.new(user: nathan, name: 'Teostora', age: 150 , country_of_origin: 'Iran', location: 'Volcano')
