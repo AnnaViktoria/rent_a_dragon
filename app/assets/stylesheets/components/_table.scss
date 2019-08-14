@@ -1,0 +1,27 @@
+.account-main{
+}
+
+.table-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.table-main{
+  border: 1px solid black;
+}
+
+.table-titles{
+  border: 1px solid black;
+}
+
+.table-title{
+  border: 1px solid black;
+  text-align: center;
+}
+
+.table-data{
+  text-align: center;
+}
