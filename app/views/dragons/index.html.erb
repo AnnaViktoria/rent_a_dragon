@@ -1,15 +1,15 @@
 <%= render 'shared/banner' %>
 <div class="container text-center">
-  <h1 class="m-5"><strong>Cool dragons for rent</strong></h1>
+  <h1 class="m-5" show-title><strong>Cool dragons for rent</strong></h1>
   <div class="row">
     <br>
     <% @dragons.each do |dragon|  %>
-      <div class="col-3">
+      <div class="col-4">
         <div class="dragon-box" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://cdnb.artstation.com/p/assets/images/images/013/400/025/large/antonio-j-manzanedo-red-dragon-manzanedo3.jpg?1539429909;" >
-          <div class="background-pic-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url('<%= cl_image_path dragon.photo, height: 300, width: 400, crop: :fill %>')"
-          >
-            <h2><%= link_to dragon.name, dragon_path(dragon) %></h2>
+          <div class="background-pic-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path dragon.photo, height: 300, width: 400, crop: :fill %>')">
           </div>
+          <h2><%= link_to dragon.name, dragon_path(dragon) %></h2>
         </div>
       </div>
     <% end %>
