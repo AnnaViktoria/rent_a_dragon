@@ -7,11 +7,9 @@
 <h3><%= @dragon.age %></h3>
 <h3><%= @dragon.country_of_origin %></h3>
 <h3><%= @dragon.location %></h3>
-
+<%= cl_image_tag @dragon.photo %>
 <%= link_to 'Add a new dragon for rent!', new_dragon_path %>
 <%= render 'shared/reservationform' %>
-
-
 
 
 <!-- # review form -->
@@ -39,5 +37,10 @@
         <%= render "shared/review-form" %>
       </div>
     </div>
-
 </div>
+
+<br>
+<br>
+<%= link_to "Back to Dragons", dragons_path, class: "btn btn-primary"  %>
+<br>
+<br>
