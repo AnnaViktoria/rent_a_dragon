@@ -3,7 +3,7 @@
 <h2>Your Dragons : </h2>
 <ul>
   <% @dragons.each do |dragon| %>
-    <li><%= link_to "#{dragon.name}", edit_dragon_path(dragon.id) %> <%= link_to 'Delete',  dragon_path(dragon.id),
+    <li><%= link_to "#{dragon.name}", edit_dragon_path(dragon.id), class: "text-colour" %> <%= link_to 'Delete',  dragon_path(dragon.id),
           data: { confirm: 'Are you sure?' }, method: :delete %> </li>
   <% end %>
 </ul>
@@ -29,8 +29,8 @@
   <% end %>
 </table>
 
-<%= link_to "edit your information", edit_user_registration_path(), class: "btn btn-primary"  %>
-<%= link_to "Add dragon", new_dragon_path(), class: "btn btn-primary"  %>
+<%= link_to "edit your information", edit_user_registration_path(), class: "button-dragon-silver"  %>
+<%= link_to "Add dragon", new_dragon_path(), class: "button-dragon-silver"  %>
 <br>
 <br>
-<%= link_to "Back to Dragons", dragons_path, class: "btn btn-primary"  %>
+<%= link_to "Back to Dragons", dragons_path, class: "button-dragon-silver"  %>
