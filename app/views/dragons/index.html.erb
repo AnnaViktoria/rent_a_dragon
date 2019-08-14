@@ -7,8 +7,8 @@
     <% @dragons.each do |dragon|  %>
       <div class="col-6">
       <h2><%= link_to dragon.name, dragon_path(dragon) %></h2>
-      <%= link_to 'Edit', edit_dragon_path(dragon) %>
       <% end %>
       </div>
   </div>
 </div>
+

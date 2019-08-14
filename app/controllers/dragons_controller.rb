@@ -6,6 +6,7 @@ class DragonsController < ApplicationController
   end
 
   def show
+    @reservation = Reservation.new
     @review = Review.new
   end
 
@@ -34,7 +35,7 @@ class DragonsController < ApplicationController
 
   def destroy
     @dragon.destroy
-    redirect_to dragons_path
+    redirect_to  accounts_path()
   end
 
   private

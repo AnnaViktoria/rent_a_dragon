@@ -1,6 +1,10 @@
 class ReservationsController < ApplicationController
 
-  before_action :set_reservation, only [:update, :edit, :destroy]
+  before_action :set_reservation, only: [:update, :edit, :destroy]
+
+  def dashboard
+    @reservations = current_user.reservations
+  end
 
   def new
     @reservation = Reservation.new
@@ -9,20 +13,19 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.dragon = Dragon.find(params[:dragon_id])
+    @reservation.user = current_user
     if @reservation.save
-      redirect_to reservations_path(@reservation)
+      redirect_to dashboard_path
     else
       render :new
     end
   end
 
   def update
-    @reservation = Reservation.new(reservation_params)
-    @reservation.dragon = Dragon.find(params[:dragon_id])
-    if @reservation.save
-      redirect_to reservations_path(@reservation)
+    if @reservation.update(reservation_params)
+      redirect_to dashboard_path
     else
-      render :update
+      render :edit
     end
   end
 
@@ -31,7 +34,7 @@ class ReservationsController < ApplicationController
 
   def destroy
     @reservation.destroy
-    redirect_to reservations_path
+    redirect_to  accounts_path
   end
 
   private
@@ -44,11 +47,4 @@ class ReservationsController < ApplicationController
     params.require(:reservation).permit(:start_date, :end_date)
 
   end
-
 end
-
-
-
-
-
-
