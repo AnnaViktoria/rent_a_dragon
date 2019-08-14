@@ -1,4 +1,4 @@
-<h1>Welcome <%= @user.first_name%></h1>
+<h1>Welcome <%= current_user.first_name%></h1>
 
 <h2>Your Dragons : </h2>
 <ul>
@@ -22,7 +22,7 @@
     <tr>
       <th><%= reservation.start_date %> </th>
       <th><%= reservation.end_date %></th>
-      <th><%= dragon.name%></th>
+      <th><%= reservation.dragon.name%></th>
       <th> <%= link_to 'Delete',  reservation_path(reservation.id),
           data: { confirm: 'Are you sure?' }, method: :delete %><th>
       </tr>
