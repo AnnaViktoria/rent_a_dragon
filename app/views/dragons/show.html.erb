@@ -7,6 +7,7 @@
         <h3><strong>Age:</strong> <%= @dragon.age %> years old</h3>
         <h3><strong>From:</strong> <%= @dragon.country_of_origin %></h3>
         <h3><strong>Currently in:</strong> <%= @dragon.location %></h3>
+        <h3><strong>Price:</strong> <%= @dragon.price %> DKK/day</h3>
           <div class= "dragonpicture-boarder" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://i.pinimg.com/736x/5f/6d/41/5f6d41f1048a9cdea28a2146955e71af.jpg"; >
         <%= cl_image_tag @dragon.photo, height: 500, width: 600, crop: :fill %>
           </div>

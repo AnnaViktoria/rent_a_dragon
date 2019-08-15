@@ -13,6 +13,7 @@
             <h4 class="dragon-card-title"> age : <%= link_to "#{dragon.age}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
             <h4 class="dragon-card-title"> country of origin : <%= link_to "#{dragon.country_of_origin}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
             <h4 class="dragon-card-title"> Location : <%= link_to "#{dragon.location}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
+            <h4 class="dragon-card-title"> Price : <%= link_to "#{dragon.price}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
             <div class ="dragon-card-link">
               <%= link_to 'Delete',  dragon_path(dragon.id),data: { confirm: 'Are you sure?' }, method: :delete, class:"dragon-card-title"  %>
               <%= link_to 'Edit',  edit_dragon_path(dragon.id), class:"dragon-card-title"  %>
