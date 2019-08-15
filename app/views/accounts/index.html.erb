@@ -14,7 +14,7 @@
             <h4 class="dragon-card-title"> Country of origin : <%= link_to "#{dragon.country_of_origin}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
             <h4 class="dragon-card-title"> Location : <%= link_to "#{dragon.location}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
             <h4 class="dragon-card-title"> Price : <%= link_to "#{dragon.price}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
-            <div class ="dragon-card-link">
+            <div class ="dragon-card-link" style="margin-bottom: 15px;">
               <%= link_to 'Delete',  dragon_path(dragon.id),data: { confirm: 'Are you sure?' }, method: :delete, class:"dragon-card-title"  %>
               <%= link_to 'Edit',  edit_dragon_path(dragon.id), class:"dragon-card-title"  %>
             </div>
@@ -25,16 +25,16 @@
       <h2 class="account-title" style="margin-top: 50px; text-align: center">Your Reservations </h2>
       <div class="account-dragon-list">
         <% @reservations.each do |reservation| %>
-          <div class="account-dragon-card">
-            <h3 class="dragon-card-title"><%= link_to "#{reservation.dragon.name}", edit_dragon_path(reservation.dragon.id), class:"dragon-card-title" %></h3>
+          <div class="account-dragon-card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://i.pinimg.com/736x/5f/6d/41/5f6d41f1048a9cdea28a2146955e71af.jpg";>
+            <h3 class="dragon-card-title"><%= reservation.dragon.name %></h3>
             <div class="dragon-card-image">
               <%= cl_image_tag reservation.dragon.photo, height: 250, width: 300, crop: :fill %>
             </div>
             <h4 class="dragon-card-title"> Start date : <%= reservation.start_date %></h4>
             <h4 class="dragon-card-title"> End date : <%= reservation.end_date %></h4>
-            <div class ="dragon-card-link">
+            <h4 class="dragon-card-title"> Total : <%= (reservation.start_date .. reservation.end_date).to_a.size * reservation.dragon.price %> Cow(s)</h4>
+            <div class ="dragon-card-link" style="margin-bottom: 15px;">
               <%= link_to 'Delete',  reservation_path(reservation.id),data: { confirm: 'Are you sure?' }, method: :delete, class:"dragon-card-title" %>
-              <%= link_to 'Edit',  edit_reservation_path(reservation.id), class:"dragon-card-title button-dragon"  %>
             </div>
           </div>
         <% end %>
