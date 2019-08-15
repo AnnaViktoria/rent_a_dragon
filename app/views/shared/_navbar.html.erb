@@ -1,5 +1,6 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+  <%= link_to "/", class: "navbar-brand" do %>
+
     <div class="dragon-font"><i class="fas fa-dragon"></i></div>
     <% end %>
 
@@ -8,14 +9,15 @@
   </button>
 
 
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
+      <!--   <li class="nav-item active">
           <%= link_to "Home", '/', class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        </li> -->
+        <li class="nav-item dropdown dragon-font">
+          <%= image_tag "https://png2.kisspng.com/sh/7830e402651d87c7ea062d4036cde23d/L0KzQYm3VcA5N5DBiZH0aYP2gLBuTgV0baMye9H2cIX3dcO0ifNwdqQyiAt8dHXwPbTvif5me5Yyj9t3ZD33ecXzhb1kd516hdC2NXHpQYW5VBZlO5JnTKo3M0e7RIa8VccyPWM6T6g5NkO8SIeATwBvbz==/kisspng-user-computer-icons-system-chinese-wind-title-column-5af1427fd3ab48.378455571525760639867.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Account", accounts_path(),class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
