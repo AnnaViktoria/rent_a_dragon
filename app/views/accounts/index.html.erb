@@ -5,7 +5,7 @@
     <h2 class="account-title" style="text-align: center;">Your Dragons </h2>
       <div class="account-dragon-list">
         <% @dragons.each do |dragon| %>
-          <div class="account-dragon-card">
+          <div class="account-dragon-card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://i.pinimg.com/736x/5f/6d/41/5f6d41f1048a9cdea28a2146955e71af.jpg";>
             <h3 class="dragon-card-title"><%= link_to "#{dragon.name}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h3>
             <div class="dragon-card-image">
               <%= cl_image_tag dragon.photo, height: 250, width: 300, crop: :fill %>
