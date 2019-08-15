@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'logout', to: 'devise/sessions#destroy', as: :logout
 end
   root to: 'dragons#index'
+    get "destroy_dragons/:id", to: 'dragons#destroy', as: :destroy_dragon
   resources :dragons do
     resources :reviews, only: [:new, :create]
     resources :reservations, only: [:new, :create, :index]
