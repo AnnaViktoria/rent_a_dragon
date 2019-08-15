@@ -1,7 +1,9 @@
 .account-body{
-  margin-top: 100px;
    font-family: 'Fondamento', cursive;
    height: 100%;
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   padding: 0px;
 
 }
 
@@ -16,6 +18,7 @@
   margin-bottom: 20px;
   font-family: 'Fondamento', cursive;
   text-shadow: 4px 4px 10px red;
+  color: white;
 }
 
 .dragon-card-button{
