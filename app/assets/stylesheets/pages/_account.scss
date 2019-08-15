@@ -1,0 +1,28 @@
+.account-body{
+  margin-top: 25px;
+   font-family: 'Fondamento', cursive;
+
+}
+
+.account-dragon-list{
+  display: flex;
+  justify-content:  space-around ;
+  flex-direction: row;
+}
+
+.account-title{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Fondamento', cursive;
+  text-shadow: 4px 4px 10px red;
+}
+
+.dragon-card-button{
+  color: black;
+  margin-top: 50px;
+}
+
+.dragon-card-button:hover{
+  text-decoration: none;
+  color: black;
+}
