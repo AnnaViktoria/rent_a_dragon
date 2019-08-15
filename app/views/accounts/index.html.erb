@@ -1,6 +1,5 @@
- <div class="account-body">
-
-  <h1 class="account-title"><%= current_user.first_name%>'s account</h1>
+ <div class="account-body" style="padding-top: 20px; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1523308277941-07cb66d1041a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1566&q=80"; >
+  <h1 class="account-title" style="padding-top: 100px; margin-left: 40px;"><%= current_user.first_name%>'s account</h1>
 
 
     <h2 class="account-title" style="text-align: center;">Your Dragons </h2>
@@ -11,8 +10,8 @@
             <div class="dragon-card-image">
               <%= cl_image_tag dragon.photo, height: 250, width: 300, crop: :fill %>
             </div>
-            <h4 class="dragon-card-title"> age : <%= link_to "#{dragon.age}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
-            <h4 class="dragon-card-title"> country of origin : <%= link_to "#{dragon.country_of_origin}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
+            <h4 class="dragon-card-title"> Age : <%= link_to "#{dragon.age} ", edit_dragon_path(dragon.id), class:"dragon-card-title" %>Years</h4>
+            <h4 class="dragon-card-title"> Country of origin : <%= link_to "#{dragon.country_of_origin}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
             <h4 class="dragon-card-title"> Location : <%= link_to "#{dragon.location}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
             <h4 class="dragon-card-title"> Price : <%= link_to "#{dragon.price}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
             <div class ="dragon-card-link">
@@ -36,19 +35,13 @@
             <div class ="dragon-card-link">
               <%= link_to 'Delete',  reservation_path(reservation.id),data: { confirm: 'Are you sure?' }, method: :delete, class:"dragon-card-title" %>
               <%= link_to 'Edit',  edit_reservation_path(reservation.id), class:"dragon-card-title button-dragon"  %>
-            </div> <!-- end of dragon card link -->
-          </div> <!-- end of dragon card -->
+            </div>
+          </div>
         <% end %>
-      </div> <!-- end of account dragon list -->
-  <div style="display: flex; justify-content: space-around;margin-top: 50px; margin-bottom: 50px;">
-  <div style="margin-right: 100px;"> <%= link_to "Add a new dragon", new_dragon_path(), class:"button-dragon"  %></div>
-    <%= link_to "Edit your information", edit_user_registration_path(), class: "button-dragon"  %>
-  </div>
-  <div class="text-center">
-      <%= link_to "Back to Dragons", dragons_path, class: "button-dragon-silver"  %>
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+  <div style="display: flex; justify-content: space-around;margin-top: 50px; margin-bottom: 50px;">
+    <%= link_to "Back to Dragons", dragons_path, class: "button-dragon-silver"  %>
+    <%= link_to "edit your information", edit_user_registration_path(), class: "button-dragon-silver"  %>
+    <%= link_to "Add dragon", new_dragon_path(), class: "button-dragon-silver" %>
+  </div>
+</div>
