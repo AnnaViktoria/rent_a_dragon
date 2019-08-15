@@ -1,52 +1,59 @@
-<div class="container">
-  <div class="row justify-content-around align-items-center">
-    <div class="col-12 col-md-6 col-lg-8">
-      <%=  %>
-      <div class="text-center">
-      <h1 class="show-title">~<%= @dragon.name %>~</h1>
-      <h3><strong>Age:</strong> <%= @dragon.age %> years old</h3>
-      <h3><strong>From:</strong> <%= @dragon.country_of_origin %></h3>
-      <h3><strong>Currently in:</strong> <%= @dragon.location %></h3>
-      <%= cl_image_tag @dragon.photo, height: 500, width: 600, crop: :fill %>
+<div class="showpage-background" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1523308277941-07cb66d1041a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1566&q=80"; >
+  <div class="container">
+    <div class="row justify-content-around align-items-center">
+      <div class="col-12 col-md-6 col-lg-8">
+        <div class="text-center right-font">
+        <h1 class="show-title">~<%= @dragon.name %>~</h1>
+        <h3><strong>Age:</strong> <%= @dragon.age %> years old</h3>
+        <h3><strong>From:</strong> <%= @dragon.country_of_origin %></h3>
+        <h3><strong>Currently in:</strong> <%= @dragon.location %></h3>
+          <div class= "dragonpicture-boarder" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://i.pinimg.com/736x/5f/6d/41/5f6d41f1048a9cdea28a2146955e71af.jpg"; >
+        <%= cl_image_tag @dragon.photo, height: 500, width: 600, crop: :fill %>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <h1>Reserve <%= @dragon.name %> here!</h1>
+        <%= render 'shared/flatpickrform', unavailable_dates: @unavailable_dates %>
       </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <h1>Reserve <%= @dragon.name %> here!</h1>
-      <%= render 'shared/flatpickrform', unavailable_dates: @unavailable_dates %>
+  <br>
+  <br>
+  <br>
+
+
+  <!-- # review form -->
+  <div class= "review-text">
+  <h2><strong>Reviews</strong></h2>
+    <% if @dragon.reviews.empty? %>
+      <p>Be the first to give <%= @dragon.name %> a review</p>
+    <% else %>
+      <ul class="list-group">
+        <% @dragon.reviews.each do |review| %>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span class="">
+              <% review.rating.times do %>
+                <i class="fas fa-dragon"></i>
+              <% end %>
+            </span>
+            <%= review.content %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-3">
+          <%= render "shared/review-form" %>
+        </div>
+      </div>
+    <div class="text-center">
+    <div class="text-center"></div>
+      <br>
+      <br>
+  <%= link_to "Back to Dragons", dragons_path, class: "btn btn-primary"  %>
+      <br>
+      <br>
     </div>
   </div>
-<br>
-<br>
-<br>
-
-
-<!-- # review form -->
-<h2><strong>Reviews</strong></h2>
-  <% if @dragon.reviews.empty? %>
-    <p>Be the first to let a review</p>
-  <% else %>
-    <ul class="list-group">
-      <% @dragon.reviews.each do |review| %>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span class="">
-            <% review.rating.times do %>
-              <i class="fas fa-dragon"></i>
-            <% end %>
-          </span>
-          <%= review.content %>
-        </li>
-      <% end %>
-    </ul>
-  <% end %>
-    <div class="row">
-      <div class="col-12 col-sm-6 col-md-3">
-        <%= render "shared/review-form" %>
-      </div>
-    </div>
-
-<br>
-<br>
-<%= link_to "Back to Dragons", dragons_path, class: "btn btn-primary"  %>
-<br>
-<br>
+</div>
 </div>
