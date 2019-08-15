@@ -46,7 +46,7 @@ dragon.remote_photo_url = "https://wallup.net/wp-content/uploads/2016/04/10/2957
 dragon.save!
 
 puts "Creating dragon 6"
-dragon = Dragon.new(user: marie, name: 'Jiao-dragon', age: 200 , country_of_origin: 'China', location: 'Himalayas')
+dragon = Dragon.new(user: marie, name: 'Jiao-dragon', age: 200 , country_of_origin: 'China', location: 'Mount Fuji')
 dragon.remote_photo_url = "http://i.imgur.com/Emfjcm1.png"
 dragon.save!
 
