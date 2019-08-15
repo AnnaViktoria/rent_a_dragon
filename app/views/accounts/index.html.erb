@@ -14,6 +14,7 @@
             <h4 class="dragon-card-title"> age : <%= link_to "#{dragon.age}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
             <h4 class="dragon-card-title"> country of origin : <%= link_to "#{dragon.country_of_origin}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
             <h4 class="dragon-card-title"> Location : <%= link_to "#{dragon.location}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
+            <h4 class="dragon-card-title"> Price : <%= link_to "#{dragon.price}", edit_dragon_path(dragon.id), class:"dragon-card-title" %></h4>
             <div class ="dragon-card-link">
               <%= link_to 'Delete',  dragon_path(dragon.id),data: { confirm: 'Are you sure?' }, method: :delete, class:"dragon-card-title"  %>
               <%= link_to 'Edit',  edit_dragon_path(dragon.id), class:"dragon-card-title"  %>
@@ -22,7 +23,6 @@
         <% end %>
       </div>
 
-  <button class= "button-dragon" style="margin-right: 100px;"> <%= link_to "Add dragon", new_dragon_path(), class:"button-dragon"  %></button>
       <h2 class="account-title" style="margin-top: 50px; text-align: center">Your Reservations </h2>
       <div class="account-dragon-list">
         <% @reservations.each do |reservation| %>
@@ -36,12 +36,19 @@
             <div class ="dragon-card-link">
               <%= link_to 'Delete',  reservation_path(reservation.id),data: { confirm: 'Are you sure?' }, method: :delete, class:"dragon-card-title" %>
               <%= link_to 'Edit',  edit_reservation_path(reservation.id), class:"dragon-card-title button-dragon"  %>
-            </div>
-          </div>
+            </div> <!-- end of dragon card link -->
+          </div> <!-- end of dragon card -->
         <% end %>
-      </div>
+      </div> <!-- end of account dragon list -->
   <div style="display: flex; justify-content: space-around;margin-top: 50px; margin-bottom: 50px;">
-    <%= link_to "Back to Dragons", dragons_path, class: "button-dragon-silver"  %>
-    <%= link_to "edit your information", edit_user_registration_path(), class: "btn"  %>
+  <div style="margin-right: 100px;"> <%= link_to "Add a new dragon", new_dragon_path(), class:"button-dragon"  %></div>
+    <%= link_to "Edit your information", edit_user_registration_path(), class: "button-dragon"  %>
   </div>
-</div>
+  <div class="text-center">
+      <%= link_to "Back to Dragons", dragons_path, class: "button-dragon-silver"  %>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
