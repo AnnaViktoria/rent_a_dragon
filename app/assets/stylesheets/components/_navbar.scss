@@ -1,7 +1,13 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
 }
+
+.navbar-lewagon-white {
+  background-color: white;
+}
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -17,3 +23,5 @@
   color: -webkit-linear-gradient(to right, #B5AC49, #3CA55C);  /* Chrome 10-25, Safari 5.1-6 */
   color: linear-gradient(to right, #B5AC49, #3CA55C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+
