@@ -34,7 +34,7 @@ class ReservationsController < ApplicationController
 
   def destroy
     @reservation.destroy
-    redirect_to  accounts_path
+    redirect_to accounts_path
   end
 
   private
