@@ -66,8 +66,8 @@ dragon.remote_photo_url = "https://www.pngkey.com/png/full/155-1559555_mhw-kusha
 dragon.save!
 
 puts "Creating dragon 10"
-dragon = Dragon.new(user: anna, name: 'Nergigante', age: 280,price: 100, country_of_origin: 'Romania', location: 'Cliffs of Moher')
-dragon.remote_photo_url = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6db37440-06e9-407e-9f36-af4524d8d831/dc8xa01-d71bebd0-3cd3-4ccb-8bf4-53a39d2b2254.png/v1/fill/w_1103,h_725,q_70,strp/nergigante_by_solgravionmegazord_dc8xa01-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA1MiIsInBhdGgiOiJcL2ZcLzZkYjM3NDQwLTA2ZTktNDA3ZS05ZjM2LWFmNDUyNGQ4ZDgzMVwvZGM4eGEwMS1kNzFiZWJkMC0zY2QzLTRjY2ItOGJmNC01M2EzOWQyYjIyNTQucG5nIiwid2lkdGgiOiI8PTE2MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.UQvYmr5l4SBTRka_M36zo8rzBxGm2ugvzU-lNG52kgo"
+dragon = Dragon.new(user: anna, name: 'Nergigante', age: 280, country_of_origin: 'Romania', location: 'Cliffs of Moher')
+dragon.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1565708601/Nergigante_evrnz3.png"
 dragon.save!
 
 puts "Creating dragon 11"
