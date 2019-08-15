@@ -34,7 +34,7 @@
             <h4 class="dragon-card-title"> End date : <%= reservation.end_date %></h4>
             <h4 class="dragon-card-title"> Total : <%= (reservation.start_date .. reservation.end_date).to_a.size * reservation.dragon.price %> Cow(s)</h4>
             <div class ="dragon-card-link" style="margin-bottom: 15px;">
-              <%= link_to 'Delete',  reservation_path(reservation.id), data: { confirm: 'Are you sure?' }, method: :delete, class:"dragon-card-title" %>
+              <%= link_to 'Delete', destroy_reservation_path(reservation), data: { confirm: 'Are you sure?' }, class:"dragon-card-title" %>
             </div>
           </div>
         <% end %>
