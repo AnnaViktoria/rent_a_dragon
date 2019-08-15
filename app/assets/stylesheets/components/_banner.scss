@@ -1,9 +1,11 @@
 .banner {
+  background-size:100%;
+  background-image: url('https://cdnb.artstation.com/p/assets/images/images/013/400/025/large/antonio-j-manzanedo-red-dragon-manzanedo3.jpg?1539429909;');
   background-size: cover;
-  // background-position: center;
-  height: 600px;
-  width: 2000px;
-  padding: 150px 0;
+  height: 100vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 40vh;
 }
 
 .banner h1 {

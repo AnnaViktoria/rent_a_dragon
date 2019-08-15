@@ -26,7 +26,7 @@ dragon.remote_photo_url = "https://i.redd.it/5jlzxpm1yf901.jpg"
 dragon.save!
 
 puts "Creating dragon 2"
-dragon = Dragon.new(user: nicolo, name: 'Lunaria', age: 130 , country_of_origin: 'Pakistan', location: 'Yellowstone Caldera')
+dragon = Dragon.new(user: nicolo, name: 'Lunaria', age: 130 , country_of_origin: 'Pakistan', location: 'Krakatoa')
 dragon.remote_photo_url = "http://kojiiiima.sakura.ne.jp/WP/wp-content/uploads/2018/06/IMG_8406.jpg"
 dragon.save!
 
