@@ -11,10 +11,8 @@
   transition-property: transform;
   height: 480px;
   width: 350px;
-  background: #BA8B02;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #181818, #BA8B02);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #181818, #BA8B02); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- border-radius: 8px;
+  background-image: url("https://i.pinimg.com/736x/5f/6d/41/5f6d41f1048a9cdea28a2146955e71af.jpg");
+  border-radius: 8px;
 }
 .account-dragon-card:before {
   pointer-events: none;
