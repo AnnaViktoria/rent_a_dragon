@@ -11,7 +11,9 @@
   transition-property: transform;
   height: 500px;
   width: 350px;
-  background-image: url("https://i.pinimg.com/736x/5f/6d/41/5f6d41f1048a9cdea28a2146955e71af.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 8px;
   border-radius: 8px;
 }
 .account-dragon-card:before {
