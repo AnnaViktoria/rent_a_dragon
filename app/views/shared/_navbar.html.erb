@@ -20,7 +20,7 @@
           <%= image_tag "https://png2.kisspng.com/sh/7830e402651d87c7ea062d4036cde23d/L0KzQYm3VcA5N5DBiZH0aYP2gLBuTgV0baMye9H2cIX3dcO0ifNwdqQyiAt8dHXwPbTvif5me5Yyj9t3ZD33ecXzhb1kd516hdC2NXHpQYW5VBZlO5JnTKo3M0e7RIa8VccyPWM6T6g5NkO8SIeATwBvbz==/kisspng-user-computer-icons-system-chinese-wind-title-column-5af1427fd3ab48.378455571525760639867.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Account", accounts_path(),class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <%= link_to "Log out", logout_path, class: "dropdown-item" %>
           </div>
         </li>
       <% else %>

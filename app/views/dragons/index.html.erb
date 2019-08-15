@@ -7,7 +7,7 @@
       <div class="col-4">
         <div class="dragon-box" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://i.pinimg.com/736x/5f/6d/41/5f6d41f1048a9cdea28a2146955e71af.jpg"; >
           <div class="background-pic-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path dragon.photo, height: 300, width: 400, crop: :fill %>')">
+         url('<%= cl_image_path dragon.photo, height: 300, width: 400, crop: :fill %>')" class="thumbnail" height="100" width="100">
           </div>
           <h2><%= link_to dragon.name, dragon_path(dragon) %></h2>
         </div>
