@@ -39,7 +39,7 @@ class DragonsController < ApplicationController
   def update
     @dragon.user = current_user
     @dragon.update(dragon_params)
-    redirect_to dragons_path(@dragon)
+    redirect_to dragon_path(@dragon)
   end
 
   def destroy
