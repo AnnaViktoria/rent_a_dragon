@@ -1,9 +1,10 @@
 .button-dragon-silver {
   font-family: 'Libre Caslon Display', serif;
-  font-size: 28px;
+  font-size: 20px;
   text-decoration: none;
   font-weight: 700;
-  padding: 12px 18px 12px 18px;
+  padding: 10px 6px 10px 6px;
+  margin: 20px;
   background-color: #eaeef1;
   background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.1));
   border-radius: 3px;
@@ -27,11 +28,12 @@
 
 
 .button-dragon {
-  font-size: 20px;
+  font-size: 28px;
   font-family: 'Libre Caslon Display', serif;
   text-decoration: none;
   font-weight: 700;
-  padding: 10px 6px 10px 6px;
+  padding: 14px 12px 14px 12px;
+  margin: 20px;
   background-color: #eaeef1;
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,.1));
   border-radius: 3px;
@@ -50,4 +52,10 @@
   background-color: #d0d3d6;
   background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,0));
   box-shadow: inset 0 0 2px rgba(0,0,0,.2), inset 0 2px 5px rgba(0,0,0,.2), 0 1px rgba(255,255,255,.2);
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
 }
