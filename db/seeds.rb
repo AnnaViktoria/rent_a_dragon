@@ -52,7 +52,7 @@ dragon.save!
 
 puts "Creating dragon 7"
 dragon = Dragon.new(user: nathan, name: 'Kukulkan', age: 2500, price: 4, country_of_origin: 'Peru', location: 'Machu Picchu')
-dragon.remote_photo_url = "https://i2.wp.com/k61.kn3.net/taringa/9/9/2/E/D/1/harrycrosh/596.jpg"
+dragon.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1565961646/e891de54421d5e68db57fdda941106dd_mn7jke.jpg"
 dragon.save!
 
 puts "Creating dragon 8"
