@@ -1,6 +1,17 @@
 .footer {
-  margin-top: 10px;
+  margin-top: 15px;
+  height: 40px;
   postion: fixed;
   width: 100%;
   background-color: black;
+  p {
+    font-family: 'Libre Caslon Display', serif;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    margin-top: 20px;
+   i {
+    color: #6e2142;
+   }
+  }
 }
