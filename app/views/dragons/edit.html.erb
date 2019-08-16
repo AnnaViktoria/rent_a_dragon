@@ -5,10 +5,12 @@
   <%= simple_form_for @dragon do |f| %>
     <div class="form-inputs">
        <%= f.input :name %>
-  <%= f.input :age %>
-  <%= f.input :country_of_origin %>
-  <%= f.input :location %>
-  <%= f.input :price %>
+      <%= f.input :age %>
+      <%= f.input :country_of_origin %>
+      <%= f.input :location %>
+      <%= f.input :price %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
     </div>
   <div class ="row login-links">
     <div class="form-actions hvr-buzz-out">

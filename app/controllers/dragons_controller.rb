@@ -54,7 +54,7 @@ class DragonsController < ApplicationController
   end
 
   def dragon_params
-    params.require(:dragon).permit(:name, :age, :country_of_origin, :location, :price)
+    params.require(:dragon).permit(:name, :age, :country_of_origin, :location, :photo, :price)
   end
 
   def set_unavailable_dates
