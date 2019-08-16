@@ -4,9 +4,6 @@
 <br>
 <br>
 <br>
-
-
-
     <h1 class="account-title" style="text-align: center;">Your Dragons </h1>
     <br>
     <br>
@@ -26,8 +23,17 @@
               <%= link_to 'Edit',  edit_dragon_path(dragon.id), class:"dragon-card-title"  %>
             </div>
           </div>
-        <% end %>
-      </div>
+          <h4 class="dragon-card-title"> Age : <%= link_to "#{dragon.age} ", edit_dragon_path(dragon.id), class: "dragon-card-title" %>Years</h4>
+          <h4 class="dragon-card-title"> Country of origin : <%= link_to "#{dragon.country_of_origin}", edit_dragon_path(dragon.id), class: "dragon-card-title" %></h4>
+          <h4 class="dragon-card-title"> Location : <%= link_to "#{dragon.location}", edit_dragon_path(dragon.id), class: "dragon-card-title" %></h4>
+          <h4 class="dragon-card-title"> Price : <%= link_to "#{dragon.price}", edit_dragon_path(dragon.id), class: "dragon-card-title" %></h4>
+          <div class ="dragon-card-link" style="margin-bottom: 15px;">
+            <%= link_to 'Delete',  destroy_dragon_path(dragon),data: { confirm: 'Are you sure?' }, class: "dragon-card-title"  %>
+            <%= link_to 'Edit',  edit_dragon_path(dragon.id), class: "dragon-card-title"  %>
+          </div>
+        </div>
+      <% end %>
+    </div>
 
       <h2 class="account-reservation" style="margin-top: 50px; text-align: center">Your Reservations </h2>
       <div class="account-dragon-list">
@@ -44,11 +50,30 @@
               <%= link_to 'Delete', destroy_reservation_path(reservation), data: { confirm: 'Are you sure?' }, class:"dragon-card-title" %>
             </div>
           </div>
-        <% end %>
+          <h4 class="dragon-card-title"> Start date : <%= reservation.start_date %></h4>
+          <h4 class="dragon-card-title"> End date : <%= reservation.end_date %></h4>
+          <h4 class="dragon-card-title"> Total : <%= (reservation.start_date .. reservation.end_date).to_a.size * reservation.dragon.price %> Cow(s)</h4>
+          <div class ="dragon-card-link" style="margin-bottom: 15px;">
+            <%= link_to 'Delete', destroy_reservation_path(reservation), data: { confirm: 'Are you sure?' }, class: "dragon-card-title" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="container">
+      <!-- <div class="button-box"> -->
+      <div class="d-flex flex-column align-items-center my-4">
+        <!-- <div style="display: flex; justify-content: space-around;margin-top: 50px; margin-bottom: 50px;"> -->
+        <div class="py-3">
+          <%= link_to "Back to Dragons", dragons_path, class: "button-dragon-silver"  %>
+        </div>
+        <div class="py-3">
+          <%= link_to "edit your information", edit_user_registration_path(), class: "button-dragon-silver"  %>
+        </div>
+        <div class="py-3">
+          <%= link_to "Add dragon", new_dragon_path(), class: "button-dragon-silver" %>
+        </div>
       </div>
-  <div style="display: flex; justify-content: space-around;margin-top: 50px; margin-bottom: 50px;">
-    <%= link_to "Back to Dragons", dragons_path, class: "button-dragon-silver"  %>
-    <%= link_to "Edit your Information", edit_user_registration_path(), class: "button-dragon-silver"  %>
-    <%= link_to "Add a new Dragon", new_dragon_path(), class: "button-dragon-silver" %>
+    </div>
   </div>
 </div>
+
